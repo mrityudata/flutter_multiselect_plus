@@ -1,3 +1,10 @@
+## 1.1.1
+
+* **UI Polish**: Fixed Title rendering in dropdown header.
+* **UI Polish**: Added dividers between header, search, and list for better hierarchy.
+* **Bug Fix**: Synchronized "Select All" checkbox color with `selectedItemColor`.
+* **Layout**: Fixed sticky footer behavior for the "Done" button.
+
 ## 1.1.0
 
 * **Major UI Update**: Migrated from `AlertDialog` to a modern **Overlay-based Dropdown** for a more seamless user experience.

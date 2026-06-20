@@ -1,13 +1,21 @@
 name: flutter_multiselect_plus
 description: "A highly customizable multiselect dropdown for Flutter with search, select all, and custom styling."
-version: 1.1.0
+version: 1.1.1
 
 homepage: "https://github.com/mrityudata/flutter_multiselect_plus"
 repository: "https://github.com/mrityudata/flutter_multiselect_plus"
+issue_tracker: "https://github.com/mrityudata/flutter_multiselect_plus/issues"
+
+topics:
+  - dropdown
+  - multiselect
+  - select
+  - ui
+  - form
 
 environment:
-  sdk: ^3.11.4
-  flutter: ">=1.17.0"
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:

@@ -29,7 +29,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_multiselect_plus: ^1.1.0
+  flutter_multiselect_plus: ^1.1.2
 ```
 
 ## 🛠 Usage

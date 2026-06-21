@@ -1,3 +1,7 @@
+## 1.1.2
+
+* Updated documentation and examples in README.md.
+
 ## 1.1.1
 
 * **UI Polish**: Fixed Title rendering in dropdown header.

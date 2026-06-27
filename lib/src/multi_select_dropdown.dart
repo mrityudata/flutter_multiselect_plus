@@ -180,6 +180,7 @@ class _MultiSelectDropdownState<T> extends State<MultiSelectDropdown<T>> {
   final ScrollController _scrollController = ScrollController();
 
   final LayerLink _layerLink = LayerLink();
+  final GlobalKey _fieldKey = GlobalKey();
   OverlayEntry? _overlayEntry;
   bool _isOpen = false;
   Timer? _debounce;
@@ -258,7 +259,7 @@ class _MultiSelectDropdownState<T> extends State<MultiSelectDropdown<T>> {
       return;
     }
 
-    final RenderBox renderBox = context.findRenderObject() as RenderBox;
+    final RenderBox renderBox = _fieldKey.currentContext!.findRenderObject() as RenderBox;
     final size = renderBox.size;
     final offset = renderBox.localToGlobal(Offset.zero);
     final availableHeightBelow = MediaQuery.of(context).size.height - offset.dy - size.height;
@@ -392,6 +393,7 @@ class _MultiSelectDropdownState<T> extends State<MultiSelectDropdown<T>> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: widget.labelTextPosition,
       children: [
         Text(widget.labelText, style: widget.labelTextStyle ?? const TextStyle(fontWeight: FontWeight.bold)),
@@ -399,6 +401,7 @@ class _MultiSelectDropdownState<T> extends State<MultiSelectDropdown<T>> {
         CompositedTransformTarget(
           link: _layerLink,
           child: GestureDetector(
+            key: _fieldKey,
             onTap: _showDropdown,
           child: Container(
             padding: widget.searchFieldPadding ?? const EdgeInsets.symmetric(horizontal: 12, vertical: 10),

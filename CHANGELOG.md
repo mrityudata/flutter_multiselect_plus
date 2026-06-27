@@ -1,3 +1,10 @@
+## 1.1.3
+
+* **Bug Fix**: Fixed dropdown positioning logic to accurately detect available screen space.
+* **Bug Fix**: Resolved issue where dropdown incorrectly opened upwards when enough space was available below.
+* **Example**: Completely revamped the example app with beautiful, modern UI and diverse usage scenarios.
+* **Documentation**: Updated README with accurate installation and usage guides.
+
 ## 1.1.2
 
 * Updated documentation and examples in README.md.

@@ -8,7 +8,7 @@ A highly customizable, searchable multiselect dropdown for Flutter. Effortlessly
 | :---: | :---: |
 | ![Multi](https://raw.githubusercontent.com/mrityudata/flutter_multiselect_plus/main/screenshots/selected_items.png) | ![Single](https://raw.githubusercontent.com/mrityudata/flutter_multiselect_plus/main/screenshots/selecting_priority.png) |
 
-| Search Functionality | Max Selection Limit | 
+| Search Functionality | Max Selection Limit |
 | :---: | :---: |
 | ![Search](https://raw.githubusercontent.com/mrityudata/flutter_multiselect_plus/main/screenshots/searching_item.png) | ![Limit](https://raw.githubusercontent.com/mrityudata/flutter_multiselect_plus/main/screenshots/selecting_days.png) |
 
@@ -29,36 +29,45 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_multiselect_plus: ^1.1.2
+  flutter_multiselect_plus: ^1.1.3
 ```
 
 ## 🛠 Usage
 
 ### Multi-Select Example
 ```dart
-MultiSelectDropdown<String>(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: MultiSelectDropdown<String>(
   items: [
     MultiSelectOption(value: 'dart', label: 'Dart', icon: Icons.code),
     MultiSelectOption(value: 'flutter', label: 'Flutter', icon: Icons.flutter_dash),
   ],
-  onSelectionChanged: (selectedValues) {
+  onSelectionChanged: (List<String> selectedValues) {
     print(selectedValues);
   },
-)
+      ));
+}      
 ```
 
 ### Single-Select Example
 ```dart
-MultiSelectDropdown<int>(
-  isSingleSelect: true,
-  items: [
-    MultiSelectOption(value: 1, label: 'High Priority'),
-    MultiSelectOption(value: 2, label: 'Low Priority'),
-  ],
-  onSelectionChanged: (value) {
-    print(value);
-  },
-)
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body:
+      MultiSelectDropdown<int>(
+        isSingleSelect: true,
+        items: [
+          MultiSelectOption(value: 1, label: 'High Priority'),
+          MultiSelectOption(value: 2, label: 'Low Priority'),
+        ],
+        onSelectionChanged: (List<int> selectedValues) {
+          print(selectedValues);
+        },
+      ));
+}
 ```
 
 ## 🎨 Customization parameters
